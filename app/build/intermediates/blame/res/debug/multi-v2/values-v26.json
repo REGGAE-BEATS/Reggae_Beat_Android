@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\REGGAE_BEATS_\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "C:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\Reggae_Beat_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
                     "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\374f3210bead90f38e00a68060e1684b\\res\\values-v26\\values-v26.xml",

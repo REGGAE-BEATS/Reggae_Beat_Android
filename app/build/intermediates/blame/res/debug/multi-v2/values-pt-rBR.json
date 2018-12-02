@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\REGGAE_BEATS_\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rBR\\values-pt-rBR.xml",
+            "outputFile": "C:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\Reggae_Beat_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rBR\\values-pt-rBR.xml",
             "map": [
                 {
                     "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-17.3.4.aar\\28a16e7e9b0fea952b3f1db7f7d23df2\\res\\values-pt-rBR\\values.xml",

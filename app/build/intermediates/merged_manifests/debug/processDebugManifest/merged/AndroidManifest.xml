@@ -20,10 +20,11 @@
         android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:debuggable="true"
-        android:icon="@drawable/jam_player"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/jam_player"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="reggae_beats.com.reggaebeats.BaseActivity"
@@ -65,6 +66,18 @@
             android:label="@string/title_activity_chat__pairing"
             android:theme="@style/AppTheme" />
         <activity android:name="reggae_beats.com.reggaebeats.Profile" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
         <activity
             android:name="com.nbsp.materialfilepicker.ui.FilePickerActivity"
             android:theme="@style/MFP_BaseTheme" >

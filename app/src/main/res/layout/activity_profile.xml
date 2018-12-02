@@ -35,47 +35,35 @@
         android:layout_marginTop="@dimen/main_layout_margins">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
-
             android:elevation="5dp"
             android:gravity="center"
-            android:orientation="vertical"
-
-
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:text="Select the genre/s of music you are interested activating the switch and then click update "
                 android:textColor="#f00"
                 android:textSize="20sp" />
-
 
             <LinearLayout
                 android:id="@+id/img_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginTop="20dp"
                 android:background="#101000"
                 android:elevation="5dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-
-
                 android:weightSum="2">
 
 
                 <LinearLayout
-
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -115,24 +103,18 @@
                 </LinearLayout>
 
                 <LinearLayout
-
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-
                     android:layout_weight="1"
                     android:background="#101000"
                     android:elevation="5dp"
                     android:gravity="center"
-                    android:orientation="vertical"
-
-
-                    >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-
                         android:text="Artist"
                         android:textColor="#f00"
                         android:textSize="20sp" />

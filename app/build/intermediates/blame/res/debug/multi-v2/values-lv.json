@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\REGGAE_BEATS_\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
+            "outputFile": "C:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\Reggae_Beat_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
             "map": [
                 {
                     "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.7.3.aar\\dbe5ef8e64fd9c47473a3f959d1bb1c2\\res\\values-lv\\values-lv.xml",

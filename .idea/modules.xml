@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/REGGAE_BEATS_.iml" filepath="$PROJECT_DIR$/REGGAE_BEATS_.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reggae_Beat_Android.iml" filepath="$PROJECT_DIR$/Reggae_Beat_Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

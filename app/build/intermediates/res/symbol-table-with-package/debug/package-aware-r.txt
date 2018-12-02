@@ -892,6 +892,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable app_banner
 drawable avd_hide_password
 drawable avd_show_password
 drawable backgroun_gradient
@@ -1001,9 +1002,7 @@ drawable ic_videocam_black_24dp
 drawable ic_videocam_white_24dp
 drawable ic_word_box
 drawable ic_zip_box
-drawable jam_player
-drawable jamplayer1
-drawable jamplayer_yellow_bg
+drawable icon
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg

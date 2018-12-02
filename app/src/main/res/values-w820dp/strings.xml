@@ -8,7 +8,7 @@
 
     <string name="SHARED_PREF_CONST">SHARED_PREF_CONSTANT</string>
     <string name="RELEVANT_FIELDS">Must enter all mandatory fields.</string>
-    <string name="app_name">Jam Player</string>
+    <string name="app_name">Reggae Beats</string>
     <string name="registration_instructions">Please complete the form and click submit.</string>
     <string name="PASSWORD_VALIDATION_INSTRUCTION">Password must be ATLEAST SIX characters ,
         contain atleast one number,atleast upper case letter
