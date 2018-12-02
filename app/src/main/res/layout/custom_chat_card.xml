@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    app:cardBackgroundColor="#000"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_profile"
+
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            android:layout_marginTop="15dp"
+
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fedda"
+            app:civ_border_color="#fff"
+            app:civ_border_width="3dp" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="fedda"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:id="@+id/txv_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:text="Hey there I am using chat"
+                android:textColor="#fff"
+                android:id="@+id/txv_status" />
+        </LinearLayout>
+
+        <view
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF00A6FF" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="UPLOAD"
+        android:textColor="#f00"
+        android:textSize="50sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginTop="60dp"
+
+        android:padding="5dp"
+        android:text="Enter the name of the file you want to upload"
+        android:textColor="#f00"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/file_name"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+
+        android:background="#ffff"
+
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/lbl_selectFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:text="Attach files"
+                android:textColor="#f00"
+
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/selectFile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/lbl_selectFile"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_attach_file_yellow_24dp"
+                app:civ_border_color="#FF00A6FF"
+                app:civ_border_width="6dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/lblStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Upload files"
+                android:textColor="#f00"
+
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/submit_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/lblStatus"
+                android:layout_marginTop="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_cloud_upload_yellow_24dp"
+                app:civ_border_color="#FF00A6FF"
+                app:civ_border_width="6dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+

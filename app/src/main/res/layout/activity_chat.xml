@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    tools:context=".ChatActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/userChat"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical" />
+
+
+    <EditText
+        android:id="@+id/userChat"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/main_layout_margins"
+        android:visibility="invisible"
+        android:layout_marginRight="@dimen/main_layout_margins"
+        android:background="#fff"
+        android:hint="Write your message here"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/submitChat"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"
+        android:layout_margin="@dimen/main_layout_margins"
+        android:layout_toRightOf="@id/userChat"
+        android:background="#f0f"
+        android:elevation="@dimen/main_layout_margins"
+        android:text="Submit" />
+
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <string name="AMOUNT_DELIVERED">Amount Delivered</string>
+    <string name="AMOUNT_ON_SHELF">Amount on Shelf</string>
+    <string name="AMOUNT_SOLD">Amount Sold</string>
+    <string name="BARCODE_HERE">Barcode wil be shown here</string>
+    <string name="BAR_CHART">Bar Chart</string>
+    <string name="CLICK_TO_GET_DETAIL">"Click on an item to get detail.Images may take a while to load if the network is slow or the application was recently started"</string>
+    <string name="CREATE_GRAPH">Create Graph></string>
+    <string name="DIFFERENCE">Difference</string>
+    <string name="DO_BARCODE_SCAN">Barcode scan</string>
+    <string name="ENTER_SEARCH">"Enter your search item here"</string>
+    <string name="ENTER_TITLE">Enter Title</string>
+    <string name="EmailAddress_string">Email Address</string>
+    <string name="GRAPH_TYPE">Graph Type</string>
+    <string name="HIGH_COUNT_DIFFERENTIAL">High count differential</string>
+    <string name="IMAGE_GOES_HERE">Image goes here</string>
+    <string name="IN_STOCK">In Stock</string>
+    <string name="ITEM">Item</string>
+    <string name="ITEM_NAME">Item Name</string>
+    <string name="LINE_GRAPH">Line Graph"></string>
+    <string name="LOCATION">Location</string>
+    <string name="LOCATION_NAME">*Optional(Entering location of item)</string>
+    <string name="LOGIN">Login</string>
+    <string name="LOW_INVENTORY">Low Inventory</string>
+    <string name="O">0</string>
+    <string name="OPTIONAL_LOCATION">*Optional(Entering location of item)</string>
+    <string name="OR">Or</string>
+    <string name="PASSWORD">Password</string>
+    <string name="PASSWORD_VALIDATION_INSTRUCTION">Password must be ATLEAST SIX characters ,
+        contain atleast one number,atleast upper case letter
+        ,atleast one lower case and a special character,@,#,%,$.</string>
+    <string name="PIE_CHART">Pie Chart</string>
+    <string name="REGISTER">Register</string>
+    <string name="RELEVANT_FIELDS">Must enter all mandatory fields.</string>
+    <string name="SAVE_SD_INTERNAL">No sdcard was found,do you want to store in internal memory</string>
+    <string name="SCANNER_COUNT_MODE">SCANNER COUNT</string>
+    <string name="SHARED_PREF_CONST">SHARED_PREF_CONSTANT</string>
+    <string name="START_COUNT">Start count</string>
+    <string name="START_SCAN">Start Scan</string>
+    <string name="STOCK_COUNT">Stock Count</string>
+    <string name="SUBMIT_COUNT">Submit Count</string>
+    <string name="SUCCESSFUL_LOGIN">You may now login.</string>
+    <string name="TAKE_PICTURE">Take Picture</string>
+    <string name="TO_BE_CALCULATED">To be calculated</string>
+    <string name="UPLOAD_TO_DATABASE">Upload to  database</string>
+    <string name="USERNAME">Username</string>
+    <string name="WATCH_LISTS">"The following items are on watch list</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Jam Player</string>
+    <string name="doctor">Doctor</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="nurse">Nurse</string>
+    <string name="password_string1">Password</string>
+    <string name="phone_Number_hint">Phone Number</string>
+    <string name="receptionist">Receptionist</string>
+    <string name="registration_instructions">Please complete the form and click submit.</string>
+    <string name="submitButton">Submit</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_queing">QueingActivity</string>
+</resources>

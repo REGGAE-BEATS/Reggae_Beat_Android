@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".PairRequestActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/title_lbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_margin="@dimen/main_layout_margins"
+                android:ems="10"
+                android:gravity="center"
+                android:text="Pair Requests"
+                android:textColor="#ff0"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/to_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_lbl"
+                android:elevation="5dp"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/pair_registration_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+
+                    android:background="#fff"
+
+                    android:gravity="center_horizontal"
+                    android:hint="@string/pair_registration_code" />
+
+                <TextView
+                    android:id="@+id/to"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background_blue"
+                    android:hint="Enter the pair registration of the person you are sending to"
+
+                    android:padding="4dp"
+
+                    android:textColorHint="#ff0"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/from_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/to_container"
+                android:elevation="5dp"
+                android:weightSum="2">
+
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:elevation="5dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/your_registration_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#fff"
+                        android:gravity="center_horizontal"
+                        android:hint="@string/pair_registration_code"
+
+                        android:padding="5dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/attach_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/main_layout_margins"
+                        android:elevation="9dp"
+                        android:background="#F53">
+
+                        <TextView
+                            android:id="@+id/quick_attach_lbl"
+                            android:layout_width="117dp"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:elevation="5dp"
+                            android:ems="10"
+                            android:text="Generate your pair registration"
+                            android:textColor="#ff0"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/quick_attach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/quick_attach_lbl"
+                            android:layout_toRightOf="@id/quick_attach_lbl"
+                            android:elevation="9dp"
+
+                            android:padding="5dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_attach_file_yellow_24dp"
+
+                            android:textColor="#ff0" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/from"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/main_layout_margins"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_background_blue"
+                    android:hint="Enter your  pair registration code.This will help to identify you to the person you are sending  ."
+
+                    android:padding="4dp"
+                    android:textColorHint="#ff0"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/custom_message_lbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from_container"
+
+                android:layout_margin="@dimen/main_layout_margins"
+                android:layout_marginTop="@dimen/main_layout_margins"
+                android:ems="10"
+                android:text="You can also enter a custom message to send to the person you are pairing with"
+                android:textColor="#ff0"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/customMessage"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+
+                android:layout_below="@id/custom_message_lbl"
+                android:layout_margin="@dimen/main_layout_margins"
+                android:background="#fff"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/sendPairRequest"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/customMessage"
+                android:layout_centerHorizontal="true"
+                android:background="#4aa023"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="#ff0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

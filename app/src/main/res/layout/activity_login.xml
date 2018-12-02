@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layoutMain"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/background">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/jam_player" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editTextAccountLoginId"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edit_text_background"
+                            android:hint="Username"
+                            android:textColor="#ffffff"
+                            android:inputType="text"
+                            android:textColorHint="#ffffff" />
+
+
+                        <EditText
+                            android:id="@+id/editTextLoginPasswordId"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/edit_text_background"
+                            android:hint="Password"
+                            android:textColorHint="#ffffff"
+                            android:inputType="textPassword"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/login_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </Spinner>
+
+                    <Button
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/Login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:textColor="#ff0000"
+                        android:textStyle="bold"
+                        android:background="#ffffff"
+                        android:textSize="20sp" />
+                    />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Or register if you are new "
+                        android:textColor="#ff6f6f"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/RegisterId"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Register"
+                        android:textColor="#ff0000"
+                        android:textStyle="bold"
+                        android:background="#ffffff"
+                        android:textSize="18sp" />
+                    />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            layout="@layout/progress_bar"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+    </FrameLayout>
+</LinearLayout>

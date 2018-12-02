@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".PairingChooser">
+
+
+    <TextView
+        android:id="@+id/Instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#f00"
+        android:textSize="30sp"
+
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:gravity="center_horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="@string/INSTRUCTION" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/Instructions"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/send_pair_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#fff"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_person_add_yellow_24dp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/NEW_PAIR_REQUEST"
+                android:layout_gravity="center_vertical"
+                android:textColor="#f00"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pair_with_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/fab_margin"
+            android:background="#fF00A6FF"
+            android:layout_marginLeft="5dp">
+
+            <ImageView
+
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_pair_chat_yellow_24dp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/PAIR_WITH_FRIENDS"
+                android:textColor="#F00"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

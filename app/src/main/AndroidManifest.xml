@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="reggae_beats.com.reggaebeats">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/jam_player"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/jam_player"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".BaseActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegistrationActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PlayListActivity"
+            android:theme="@style/AppTheme" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".PlayerStoreFront"
+            android:label="@string/title_activity_player_store_front"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".MusicStreamingActivity" />
+        <activity android:name=".UploadActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".PairRequestActivity" />
+        <activity android:name=".FriendRequestActivity" />
+        <activity
+            android:name=".Chat_PairingActivity"
+            android:label="@string/title_activity_chat__pairing"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Profile"></activity>
+    </application>
+
+</manifest>

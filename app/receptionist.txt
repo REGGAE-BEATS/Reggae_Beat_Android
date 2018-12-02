@@ -1,0 +1,697 @@
+rt android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.support.design.widget.TabLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.os.Bundle;
+import android.util.Base64;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Receptionist3 extends AppCompatActivity implements ReceptionistQueue.OnFragmentInteractionListener, Receptionist_patient_details.OnFragmentInteractionListener, Receptionist_PatientQue.OnFragmentInteractionListener {
+    private Switch treated;
+    private RecyclerView receptionistRecyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+    private QueAdapter queAdapter;
+    PatientAdapter patientAdapter;
+    private ArrayList<Patient_pojo> patientQue;
+    private ArrayList<PatientRecordByDate> patientRecordByDateArrayList;
+    private RequestQueue requestQueue;
+    private VolleySingleton vSingleton;
+    private String recoveredUser;
+    private String urlRequest;
+    private String Destination = null;
+    private String recoveredSearchName;
+    private String recoveredDiagnosis;
+    private String recoveredDoctor, recoveredPrescriptions, recoveredReminder, recoveredStartDate, recoveredReturnVisit, recoveredFirstName, recoveredLastName, recoveredAddress, recoveredTelephone, recoveredEmail,
+            recoveredSex, recoveredDateOfBirth, recoveredEndDate, recoveredNotificationStats, recoveredVisitDate;
+    private String recoveredClicked;
+    private String image;
+    private String position;
+    private String patient;
+    private BroadcastReceiver broadcastReceiver1;
+    private Switch notification_status;
+    private EditText name_value, sex_value, adress_value, TD_X, diagnosis_value, doctors_report, search_value,
+            prescriptions, reminders_notifications, start_date, next_visit;
+    TextView dob_value, show_all, first_name, last_name, address_doc_view, telephone, email, patientNameAka;
+    private RadioGroup chestexamination;
+    private RadioButton yes, no;
+    private ImageView searchButton, img_upload, profile_image;
+    private Button submit;
+    private String clicked = "";
+    private String patient_name, start_date_value, return_visit_value, precriptions_value, reminder_value, diagnosis;
+    private String doctor, searchName;
+    private RecyclerView.LayoutManager receptionist_layoutManager;
+    String action = "";
+
+    private static final String TAG = "DOCTORS_VIEW";
+    private static int CAMERA_REQUEST_CODE = 1000;
+    private Boolean fromFragment = false;
+    private Bitmap bitmap;
+    private String base64String;
+    private String retrievedDate;
+
+
+    /**
+     * The {@link android.support.v4.view.PagerAdapter} that will provide
+     * fragments for each of the sections. We use a
+     * {@link FragmentPagerAdapter} derivative, which will keep every
+     * loaded fragment in memory. If this becomes too memory intensive, it
+     * may be best to switch to a
+     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     */
+    private SectionsPagerAdapter mSectionsPagerAdapter;
+
+    /**
+     * The {@link ViewPager} that will host the section contents.
+     */
+    private ViewPager mViewPager;
+
+private TextView queHeading;
+    Toolbar toolbar;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_receptionist2);
+
+        receptionistRecyclerView = findViewById(R.id.receptionist_recycler);
+        patientRecordByDateArrayList = new ArrayList<>();
+        receptionist_layoutManager = new LinearLayoutManager(this);
+        /*set up broadcast reciever
+         *to listen for action string
+         */
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("Receptionist View");
+        // Create the adapter that will return a fragment for each of the three
+        // primary sections of the activity.
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+
+        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+
+                    case 0:
+                        Toast.makeText(getApplicationContext(), "que called from selected tab", Toast.LENGTH_LONG).show();
+                        ReceptionistQueue receptionistQueue = new ReceptionistQueue();
+                        break;
+
+
+                    case 1:
+
+                        Toast.makeText(getApplicationContext(), "patient que called from on tab selected", Toast.LENGTH_LONG).show();
+                        Receptionist_PatientQue receptionist_patientQue = Receptionist_PatientQue.newInstance("RETRIEVE_PATIENT_RECORDS_BY_DATE", recoveredUser);
+
+                    case 2:
+                        Receptionist_patient_details receptionist_patient_details = new Receptionist_patient_details();
+
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
+    }
+
+    public void createRequest1(final String user, final String Action, RecyclerView recyclerView) {
+        Toast.makeText(getApplicationContext(), "request shoot off", Toast.LENGTH_LONG).show();
+        //create a string request
+        if (user != null && Action == "RETRIEVE_SELECTED_RECORD") {
+
+            urlRequest = "http://jpsbillfinder.com/onlinedoc/patientform.php";
+        }
+
+        if (user != null && Action == "RETRIEVE_PATIENT_RECORDS_BY_DATE") {
+
+            urlRequest = "http://jpsbillfinder.com/onlinedoc/patientform.php";
+        }
+
+        if (Action == "ALL_RECORDS_DOC_VIEW") {
+            urlRequest = "http://www.jpsbillfinder.com/onlinedoc/interface_methods.php";
+            Toast.makeText(getApplicationContext(), "all records call", Toast.LENGTH_LONG).show();
+        }
+
+        if (Action == "UPDATE") {
+            urlRequest = "http://www.jpsbillfinder.com/onlinedoc/interface_methods.php";
+        }
+        StringRequest request = new StringRequest(Request.Method.POST, urlRequest,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        patientQue = new ArrayList<>();
+                        //Toast.makeText(getApplicationContext(), "onResponse call" + response, Toast.LENGTH_LONG).show();
+                        //if (Action == "ALL_RECORDS_DOC_VIEW") {
+                        // feedRecyclerWithData(response);
+
+                        //}//if user is passed in
+                        //}
+                        //if (Action == "SEARCH") {
+
+                        // fillPatientForm(response);
+                        // }
+
+
+                        if (Action == "RETRIEVE_PATIENT_RECORDS_BY_DATE") {
+                            displayPatientRecordByDate(response);
+
+                        }
+                        // if (Action == "RETRIEVE_SELECTED_RECORD") {
+                        //fillPatientForm(response);
+                        // }
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                if (Action == "ALL_RECORDS_DOC_VIEW") {
+                    params.put("ACTION", "ALL_RECORDS_DOC_VIEW");
+                }
+
+                if (Action == "RETRIEVE_PATIENT_RECORDS_BY_DATE") {
+                    params.put("ACTION", "RETRIEVE_PATIENT_RECORDS_BY_DATE");
+                    params.put("PATIENT_NAME", recoveredUser);
+
+                }
+
+
+                if (Action == "RETRIEVE_SELECTED_RECORD") {
+                    params.put("ACTION", "RETRIEVE_SELECTED_RECORD");
+                    params.put("PATIENT_NAME", user);
+                    params.put("DATE", retrievedDate);
+
+
+                }
+
+                return params;
+            }
+        };
+        VolleySingleton.getInstance(this).AddToRequestQue(request);
+
+    }
+
+    public void displayPatientRecordByDate(String response) {
+        String date;
+        String patient;
+        Toast.makeText(getApplicationContext(), "displayPatientRecord in  receptionist3", Toast.LENGTH_LONG).show();
+        try {
+            JSONArray jsonArray = new JSONArray(response);
+            for (int i = 0; i <= jsonArray.length() - 1; i++) {
+
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                date = (String) jsonObject.get("DATE_OF_VISIT");
+                patient = (String) jsonObject.get("PATIENT");
+                //Toast.makeText(getApplicationContext(), "DATE " + date, Toast.LENGTH_LONG).show();
+                PatientRecordByDate patientRecordByDate = new PatientRecordByDate(date, patient);
+                patientRecordByDateArrayList.add(patientRecordByDate);
+                //.d(TAG,"data" + i + " " + image + " " + position + "  " + patient);
+            }               /*build adapter
+                            pass data to adpater
+                            set adapter on recycler view
+                             */
+
+            // Toast.makeText(getApplicationContext(), "patient que called from on tab selected", Toast.LENGTH_LONG).show();
+            Receptionist_PatientQue receptionist_patientQue = Receptionist_PatientQue.newInstance("RETRIEVE_PATIENT_RECORDS_BY_DATE", recoveredUser);
+            receptionist_patientQue.setPatientRecordByDateArrayList(patientRecordByDateArrayList);
+            /*recyclerView.setLayoutManager(linearLayoutManager);
+            queAdapter.notifyDataSetChanged();
+            queAdapter = new QueAdapter(context, null, patientRecordByDateArrayList, R.layout.patient_record_date_view);
+            recyclerView.setAdapter(queAdapter);
+            queAdapter.notifyDataSetChanged();*/
+
+            Toast.makeText(getApplicationContext(), "recyclerView SET in receptionist3" + patientRecordByDateArrayList.size(), Toast.LENGTH_LONG).show();
+
+        } catch (JSONException e) {
+
+            e.printStackTrace();
+        }
+
+
+    }
+
+
+    /* @Override
+     public void createRequest(String user, String Action, RecyclerView recyclerView) {
+         super.createRequest(user, Action, recyclerView);
+     }
+
+     @Override
+     public void displayPatientRecordByDate(String response, Context context, RecyclerView recyclerView, RecyclerView.LayoutManager layoutManager) {
+         super.displayPatientRecordByDate(response, Receptionist3.this, receptionistRecyclerView, receptionist_layoutManager);
+ if(context instanceof Receptionist3){//meaning you are in Receptionist3
+    // receptionistRecyclerView.setHasFixedSize(true);
+     //receptionistRecyclerView.setLayoutManager(layoutManager);
+
+    Receptionist_PatientQue receptionist_patientQue = Receptionist_PatientQue.newInstance("ALL_RECORDS_DOC_VIEW", null);
+     Toast.makeText(getApplicationContext(),"You are in receptionist3 context",Toast.LENGTH_LONG).show();
+ }
+
+     }
+
+     @Override
+     public void updateUi(String patient, String Chest_Exam, String diagnosis, String Doctor, String prescriptions, String reminders, String start_date, String return_visit, String first_name, String last_name, String address, String telephone, String email, String sex, String date_of_birth) {
+         super.updateUi(patient, Chest_Exam, diagnosis, Doctor, prescriptions, reminders, start_date, return_visit, first_name, last_name, address, telephone, email, sex, date_of_birth);
+     }
+
+     @Override
+     public void checkAndGrantSelfpermissionForCamera() {
+         super.checkAndGrantSelfpermissionForCamera();
+     }
+
+     @Override
+     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+         super.onActivityResult(requestCode, resultCode, data);
+     }
+
+     @Override
+     public void feedRecyclerWithData(String response) {
+         super.feedRecyclerWithData(response);
+     }
+
+     @Override
+     public void buildFragment(String user, String chestExam, String diagnosis, String doctor1, String prescriptions, String reminders, String start_date, String return_visit, String first_name, String last_name, String address, String telephone, String email, String sex, String date_of_birth, String end_date, String notificationStats, String visit_date, int container) {
+         super.buildFragment(user, chestExam, diagnosis, doctor1, prescriptions, reminders, start_date, return_visit, first_name, last_name, address, telephone, email, sex, date_of_birth, end_date, notificationStats, visit_date, R.id.que);
+     }
+
+     @Override
+     public void fillPatientForm(String response) {
+         super.fillPatientForm(response);
+     }
+
+     @Override
+     public void callDialog() {
+         super.callDialog();
+
+     }
+ */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_receptionist3, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    /*@Override
+    public void onFragmentInteraction(String user, String chestExam, String diagnosis, String doctor1, String prescriptions, String reminders, String start_date, String return_visit, String first_name, String last_name, String address, String telephone, String email, String sex, String date_of_birth, String end_date, String notification_stats, String visit_date, String Destination1) {
+        super.onFragmentInteraction(user, chestExam, diagnosis, doctor1, prescriptions, reminders, start_date, return_visit, first_name, last_name, address, telephone, email, sex, date_of_birth, end_date, notification_stats, visit_date, Destination1);
+
+    }*/
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    class DoctorsViewAsyncTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // Toast.makeText(getBaseContext(), "Recovered user" + recoveredSearchName, Toast.LENGTH_LONG).show();
+            if (Destination != "FROM_FRAGMENT") {
+                searchName = search_value.getText().toString();
+                start_date_value = start_date.getText().toString();
+                return_visit_value = next_visit.getText().toString();
+                precriptions_value = prescriptions.getText().toString();
+                reminder_value = reminders_notifications.getText().toString();
+                patient_name = patientNameAka.getText().toString();
+                diagnosis = diagnosis_value.getText().toString();
+                doctor = doctors_report.getText().toString();
+
+                yes = findViewById(R.id.yes);
+                no = findViewById(R.id.no);
+
+
+                //create a base 64 encoded string of bitmap image
+                if (bitmap != null) {
+                    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+                    byte[] byteArray = byteArrayOutputStream.toByteArray();
+                    base64String = Base64.encode(byteArray, Base64.DEFAULT).toString();
+                }
+
+            }
+        }
+
+        @Override
+        protected String doInBackground(String... strings) {
+            String urlPatientform = "http://jpsbillfinder.com/onlinedoc/patientform.php";
+            urlRequest = "http://www.jpsbillfinder.com/onlinedoc/interface_methods.php";
+            Uri.Builder builder = new Uri.Builder();
+            if (strings[0] == "SUBMIT") {
+                builder.appendQueryParameter("PATIENT_NAME", patient_name)
+                        .appendQueryParameter("PRESCRIPTIONS", precriptions_value)
+                        .appendQueryParameter("START_DATE", start_date_value)
+                        .appendQueryParameter("DIAGNOSIS", diagnosis)
+                        .appendQueryParameter("DOCTOR", doctor)
+                        .appendQueryParameter("CHEST_EXAM", clicked)
+                        .appendQueryParameter("RETURN_VISIT", return_visit_value).
+                        appendQueryParameter("ACTION", "INSERT")
+                        .appendQueryParameter("IMAGE", base64String);
+
+
+            }
+            if (strings[0] == "SEARCH") {
+                builder.appendQueryParameter("ACTION", "SEARCH").
+                        appendQueryParameter("PATIENT_NAME", searchName);
+
+            }
+
+
+            if (strings[0] == "SEARCH_CHECK") {
+                builder.appendQueryParameter("ACTION", "SEARCH_CHECK").
+                        appendQueryParameter("PATIENT_NAME", recoveredSearchName);
+                //.appendQueryParameter("DOB", dob);
+
+            }
+
+            if (strings[0] == "UPDATE") {
+                builder.appendQueryParameter("PATIENT_NAME", recoveredSearchName)
+                        .appendQueryParameter("START_DATE", recoveredStartDate)
+                        .appendQueryParameter("PRESCRIPTIONS", recoveredPrescriptions)
+                        .appendQueryParameter("DIAGNOSIS", recoveredDiagnosis)
+                        .appendQueryParameter("DOCTOR", recoveredDoctor)
+                        .appendQueryParameter("CHEST_EXAM", recoveredClicked)
+                        .appendQueryParameter("ACTION", "UPDATE")
+                        .appendQueryParameter("RETURN_VISIT", recoveredReminder)
+                        .appendQueryParameter("REMINDERS", recoveredReminder)
+                        .appendQueryParameter("START_DATE", recoveredStartDate)
+                        .appendQueryParameter("RETURN_VISIT", recoveredReturnVisit)
+                        .appendQueryParameter("FIRST_NAME", recoveredFirstName)
+                        .appendQueryParameter("LAST_NAME", recoveredLastName)
+                        .appendQueryParameter("ADDRESS", recoveredAddress)
+                        .appendQueryParameter("TELEPHONE", recoveredTelephone)
+                        .appendQueryParameter("EMAIL", recoveredEmail)
+                        .appendQueryParameter("SEX", recoveredSex)
+                        .appendQueryParameter("DATE_OF_BIRTH", recoveredDateOfBirth).
+                        appendQueryParameter("END_DATE", recoveredEndDate)
+                        .appendQueryParameter("NOTIFICATION_STATUS", recoveredNotificationStats)
+                        .appendQueryParameter("DATE_OF_VISIT", recoveredVisitDate);
+
+
+            }
+
+           /* if (strings[0] == "UPDATE" && Destination == "FROM_FRAGMENT" ) {
+                builder.appendQueryParameter("PATIENT_NAME", recoveredSearchName)
+                        .appendQueryParameter("SEX", recoveredSex)
+                        .appendQueryParameter("ADDRESS", recoveredAddress)
+                        .appendQueryParameter("DIAGNOSIS", recoveredDiagnosis)
+                        .appendQueryParameter("DOCTOR", recoveredDoctor)
+                        .appendQueryParameter("CHEST_EXAM", recoveredClicked)
+                        .appendQueryParameter("DOB", dob).
+                        appendQueryParameter("ACTION", "UPDATE")
+                        .appendQueryParameter("IMAGE", base64String);
+
+
+            }
+*/
+
+
+            String query = builder.build().getEncodedQuery();
+            String response = null;
+            try {
+                //Check for internet connectivity
+                if (new Configuration(Receptionist3.this).IsNetworkAvailable()) {
+                    response = new NetWorkConnection().ServerConnectionResults(query, urlRequest);
+                }
+
+                if (action == "UPDATE") {
+                    if (new Configuration(Receptionist3.this).IsNetworkAvailable()) {
+                        response = new NetWorkConnection().ServerConnectionResults(query, urlPatientform);
+                    }
+
+                }
+
+                if (action == "SEARCH_CHECK") {
+                    if (new Configuration(Receptionist3.this).IsNetworkAvailable()) {
+                        response = new NetWorkConnection().ServerConnectionResults(query, urlPatientform);
+                    }
+
+                }
+
+
+            } catch (MalformedURLException e) {
+
+                e.printStackTrace();
+
+            }
+            return response;
+
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            String Success = null;
+            String Doctor;
+            String Chest_Exam;
+            String patient;
+            String Diagnosis;
+            String message = null;
+            String reminders;
+            String prescriptions;
+            String return_visit;
+            String start_date;
+            String address;
+            String sex;
+            String date_of_birth;
+            String first_name, last_name, telephone, email, end_date, notification_stats, visit_date;
+
+            Toast.makeText(getBaseContext(), "Response1 is: " + s, Toast.LENGTH_LONG).show();
+            try {
+                JSONObject jsonObject = new JSONObject(s);
+
+                if (jsonObject.getString("MESSAGE") != null) {
+                    message = jsonObject.getString("MESSAGE");
+                }
+                if ((String) jsonObject.get("SUCCESS") != null) {
+                    Success = (String) jsonObject.get("SUCCESS");
+                }
+
+                address = (String) jsonObject.get("ADDRESS");
+                Doctor = (String) jsonObject.get("DOCTOR");
+                return_visit = (String) jsonObject.get("RETURN_VISIT");
+                reminders = (String) jsonObject.get("REMINDERS");
+                start_date = (String) jsonObject.get("START_DATE");
+                Chest_Exam = (String) jsonObject.get("CHEST_EXAM");
+                patient = (String) jsonObject.get("PATIENT");
+                Diagnosis = (String) jsonObject.get("DIAGNOSIS");
+                prescriptions = (String) jsonObject.get("PRESCRIPTIONS");
+                prescriptions = (String) jsonObject.get("PRESCRIPTIONS");
+                sex = (String) jsonObject.get("SEX");
+                first_name = (String) jsonObject.get("FIRST_NAME");
+                last_name = (String) jsonObject.get("LAST_NAME");
+                telephone = (String) jsonObject.get("TELEPHONE");
+                email = (String) jsonObject.get("EMAIL");
+                date_of_birth = (String) jsonObject.get("DATE_OF_BIRTH");
+                end_date = (String) jsonObject.get("DATE_OF_BIRTH");
+                notification_stats = (String) jsonObject.get("NOTIFICATION_STATUS");
+                visit_date = (String) jsonObject.get("DATE_OF_VISIT");
+                Toast.makeText(getApplicationContext(), "in  DOCTORS VIEW" + Chest_Exam, Toast.LENGTH_LONG).show();
+                //Build fragment with data and add to container
+               /* buildFragment(patient, Chest_Exam, diagnosis,
+                        Doctor, prescriptions, reminders, start_date, return_visit,
+                        first_name, last_name, address, telephone, email, sex, date_of_birth, end_date, notification_stats, visit_date, R.id.recycler_container);
+
+           /*    to remove    NewPatienDetailsFragment newPatienDetailsFragment =
+                        NewPatienDetailsFragment.newInstance(patient, Chest_Exam, diagnosis, Doctor, prescriptions, reminders, start_date, return_visit, first_name, last_name, address, telephone, email,sex,date_of_birth);
+*/
+               /* if ((Success).equals("one")) {
+                    updateUi(patient, Chest_Exam, diagnosis, Doctor, prescriptions, reminders, start_date, return_visit, first_name, last_name, address, telephone, email,sex,date_of_birth);
+                    buildFragment(patient, Chest_Exam, diagnosis, Doctor, prescriptions, reminders, start_date, return_visit, first_name, last_name, address, telephone, email);
+                    //Toast.makeText(getBaseContext(), "Response2 is: " + Diagnosis, Toast.LENGTH_LONG).show();
+                }*/
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            try {
+                if ((message).equals("RECORD_MATCHED")) {
+
+                    // callDialog();
+                }
+            } catch (NullPointerException e) {
+
+                e.printStackTrace();
+            }
+
+
+        }
+    }
+    /**
+     * A placeholder fragment containing a simple view.
+     */
+   /* public static class PlaceholderFragment extends Fragment {
+        /**
+         * The fragment argument representing the section number for this
+         * fragment.
+         */
+       /* private static final String ARG_SECTION_NUMBER = "section_number";
+
+        public PlaceholderFragment() {
+        }
+
+        /**
+         * Returns a new instance of this fragment for the given section
+         * number.
+         */
+       /* public static PlaceholderFragment newInstance(int sectionNumber) {
+            PlaceholderFragment fragment = new PlaceholderFragment();
+            Bundle args = new Bundle();
+            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_receptionist3, container, false);
+            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            return rootView;
+        }
+    }
+*/
+
+    /**
+     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+     * one of the sections/tabs/pages.
+     */
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            Fragment fragment = null;
+            switch (position) {
+
+                case 0:
+                    Toast.makeText(getApplicationContext(), "que called", Toast.LENGTH_LONG).show();
+                    fragment = new ReceptionistQueue();
+                    break;
+
+
+                case 1:
+
+                    Toast.makeText(getApplicationContext(), "rECEPTIONIST FRAGMENT CALLED", Toast.LENGTH_LONG).show();
+                    fragment = Receptionist_PatientQue.newInstance("ALL_RECORDS_DOC_VIEW", null);
+
+                    break;
+                case 2:
+                    fragment = new Receptionist_patient_details();
+                    break;
+
+
+            }
+
+            return fragment;
+        }
+
+        @Override
+        public int getCount() {
+            // Show 3 total pages.
+            return 3;
+        }
+    }
+
+    protected void onResume() {
+        super.onResume();
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver1, new IntentFilter("com.onlinedoc_queAdapter1_user"));
+    }
+
+
+}

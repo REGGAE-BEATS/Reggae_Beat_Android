@@ -1,0 +1,54 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+
+    <dimen name="activity_horizontal_margin_landscape">120dp</dimen>
+    <dimen name="activity_horizontal_margin_landscape_half">60dp</dimen>
+    <dimen name="ITEM_COUNT_WIDTH">100dp</dimen>
+
+
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="main_layout_margins">15dp</dimen>
+    <dimen name="landscape_margin_normal">115dp</dimen>
+    <dimen name="landscape_margin_large">290dp</dimen>
+    <dimen name="edit_text_height">35dp</dimen>
+    <dimen name="activity_horizontal_margin_landscape_plus">180dp</dimen>
+    <dimen name="bt_default_item_height">35dp</dimen>
+    <dimen name="activity_horizontal_margin_landscape_large">90dp</dimen>"
+    <dimen name="bt_form_padding">15dp</dimen>
+    <dimen name="edit_text_height_large_xlarge">55dp</dimen>
+    <dimen name="edit_text_height_large">50dp</dimen>
+    <dimen name="copyright_size_large_xlarge">25dp</dimen>
+    <dimen name="default_text_size_xxlarge">30sp</dimen>
+    <dimen name="copyright_margin_large_xlarge">112dp</dimen>
+    <dimen name="default_text_size_large_xlarge_Instruction">24sp</dimen>
+    <dimen name="default_text_size_normal_Instruction">21sp</dimen>
+    <dimen name="default_text_size_large_xlarge_Password_Instruction">12sp</dimen>
+    <dimen name="default_text_size_large_xlarge_caption_noBold">30sp</dimen>
+    <dimen name="edit_text_height_xlarge">55dp</dimen>
+    <dimen name="default_text_size">20sp</dimen>
+    <dimen name="default_text_size_large">25sp</dimen>
+    <dimen name="default_text_size_xlarge">30sp</dimen>
+    <dimen name="EDIT_TEXT_MARGIN">5dp</dimen>
+    <dimen name="TWO_PANE_LANDSCAPE_NORMAL">220dp</dimen>
+    <dimen name="PORTRAIT_XLARGE">120dp</dimen>
+    <dimen name="TWO_PANE_LANDSCAPE_NORMAL_BOTTOM">10dp</dimen>
+    <dimen name="TWO_PANE_LANDSCAPE_LARGE_IMAGE">250dp</dimen>
+    <dimen name="RIGHT_PANE_LANDSCAPE_MARGIN_LARGE">370dp</dimen>
+    <dimen name="RIGHT_PANE_LANDSCAPE_MARGIN_XLARGE">440dp</dimen>
+    <dimen name="MOTTO_LANDSCAPE_MARGIN_XLARGE">390dp</dimen>
+    <dimen name="LEFT_PANE_LANDSCAPE_MARGIN_TEXT_XLARGE">300dp</dimen>
+    <dimen name="TWO_PANE_LANDSCAPE_LARGE_IMAGE_XLARGE">280dp</dimen>
+    <dimen name="TWO_PANE_PORTRAIT_LARGE_IMAGE_XLARGE">200dp</dimen>
+    <dimen name="BUTTON_HEIGHT_LARGE_XLARGE">40dp</dimen>
+    <dimen name="BUTTON_HEIGHT_NORMAL">35dp</dimen>
+    <dimen name="BUTTON_LARGE_XLARGE_TEXT_SIZE">21sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+</resources>

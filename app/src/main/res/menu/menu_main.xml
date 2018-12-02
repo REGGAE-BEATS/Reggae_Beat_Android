@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/search"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_search_yellow_24dp"
+        android:title="@string/action_search"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/chat_menu"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_chat_bubble_black_24dp"
+        android:title="Chat"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/profile"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_person_add_yellow_24dp"
+        android:title="Chat"
+        app:showAsAction="always" />
+</menu>

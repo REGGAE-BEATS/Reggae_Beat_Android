@@ -1,0 +1,2 @@
+# Referenced at C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\REGGAE_BEATS_\app\build\intermediates\merged_manifests\debugAndroidTest\processDebugAndroidTestManifest\merged\AndroidManifest.xml:9
+-keep class android.support.test.runner.AndroidJUnitRunner { <init>(...); }

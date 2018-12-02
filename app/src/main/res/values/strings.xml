@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">JamPlayer</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_playList">Playlist</string>
+    <string name="about_vybz">Adidja Azim Palmer (born 7 January 1976)[2][3][4] better known as Vybz Kartel, is a Jamaican musical artist, record producer, entrepreneur and convicted murderer. Among his various nicknames, he is referred to as "Worl' Boss"[5] and has been recognized as one of genre’s most prolific and skilled
+        lyricists credited with further popularizing dancehal</string>
+    <string name="title_activity_home">home</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_player_store_front">PlayerStoreFront</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="SAVE_SD_INTERNAL">No sdcard was found,do you want to store in internal memory</string>
+
+    <string name="SUCCESSFUL_LOGIN">You may now login.</string>
+
+    <string name="SHARED_PREF_CONST">SHARED_PREF_CONSTANT</string>
+    <string name="RELEVANT_FIELDS">Must enter all mandatory fields.</string>
+
+    <string name="registration_instructions">Please complete the form and click submit.</string>
+    <string name="PASSWORD_VALIDATION_INSTRUCTION">Password must be ATLEAST SIX characters ,
+        contain atleast one number,atleast upper case letter
+        ,atleast one lower case and a special character,@,#,%,$.</string>
+    <string name="EmailAddress_string">Email Address</string>
+    <string name="password_string1">Password</string>
+    <string name="submitButton">Submit</string>
+    <string name="phone_Number_hint">Phone Number</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="START_SCAN">Start Scan</string>
+    <string name="SUBMIT_COUNT">Submit Count</string>
+    <string name="LOCATION">Location</string>
+    <string name="TO_BE_CALCULATED">To be calculated</string>
+    <string name="AMOUNT_SOLD">Amount Sold</string>
+    <string name="ITEM">Item</string>
+    <string name="O">0</string>
+    <string name="START_COUNT">Start count</string>
+    <string name="SCANNER_COUNT_MODE">SCANNER COUNT</string>
+    <string name="IN_STOCK">In Stock</string>
+    <string name="REGISTER">Register</string>
+    <string name="ENTER_SEARCH">"Enter your search item here"</string>
+    <string name="OR">Or</string>
+    <string name="ENTER_TITLE">Enter Title</string>
+    <string name="GRAPH_TYPE">Graph Type</string>
+    <string name="CREATE_GRAPH">Create Graph></string>
+    <string name="PIE_CHART">Pie Chart</string>
+    <string name="PASSWORD">Password</string>
+    <string name="USERNAME">Username</string>
+    <string name="BAR_CHART">Bar Chart</string>
+    <string name="LINE_GRAPH">Line Graph"></string>
+    <string name="STOCK_COUNT">Stock Count</string>
+    <string name="LOGIN">Login</string>
+    <string name="CLICK_TO_GET_DETAIL">"Click on an item to get detail.Images may take a while to load if the network is slow or the application was recently started"</string>
+    <string name="AMOUNT_DELIVERED">Amount Delivered</string>
+    <string name="AMOUNT_ON_SHELF">Amount on Shelf</string>
+    <string name="DIFFERENCE">Difference</string>
+
+    <string name="doctor">Doctor</string>
+    <string name="nurse">Nurse</string>
+    <string name="receptionist">Receptionist</string>
+    <string name="ITEM_NAME">Item Name</string>
+    <string name="HIGH_COUNT_DIFFERENTIAL">High count differential</string>
+    <string name="LOW_INVENTORY">Low Inventory</string>
+    <string name="WATCH_LISTS">"The following items are on watch list</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="TAKE_PICTURE">Take Picture</string>
+    <string name="UPLOAD_TO_DATABASE">Upload to  database</string>
+
+    <string name="BARCODE_HERE">Barcode wil be shown here</string>
+    <string name="IMAGE_GOES_HERE">Image goes here</string>
+    <string name="DO_BARCODE_SCAN">Barcode scan</string>
+    <string name="LOCATION_NAME">*Optional(Entering location of item)</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="NEW_PAIR_REQUEST">Send a new pair request</string>
+    <string name="PAIR_WITH_FRIENDS">Pair with friends</string>
+    <string name="INSTRUCTION">What do you want to do ?</string>
+    <string name="pair_registration_code">Enter pair registration code</string>
+    <string name="REGISTRATION_CODE_PLACEHOLDER">Registration code goes here</string>
+    <string name="title_activity_chat__pairing">Chat_PairingActivity</string>
+</resources>

@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".RegistrationActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:gravity="center"
+                    android:text="Register New User"
+                    android:textColor="#ff5a5a"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/NewUserNameId"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="Email"
+                    android:inputType="textPersonName"
+                    android:visibility="visible">
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/NewUserPasswordId"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/password_string1"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/PASSWORD_VALIDATION_INSTRUCTION"
+                    android:textColor="#a4a4a4"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="Select your profession "
+                    android:textColor="#8e0101"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+
+                <Button
+                    android:id="@+id/RegisterButtonId"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="#00ff00"
+                    android:text="@string/REGISTER"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            layout="@layout/progress_bar"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </FrameLayout>
+</LinearLayout>

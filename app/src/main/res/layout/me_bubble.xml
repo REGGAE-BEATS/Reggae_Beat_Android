@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/overall_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:visibility="visible">
+
+
+    <LinearLayout
+        android:id="@+id/chat_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/edit_text_background_orange"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/person"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="person"
+            android:textColor="#fff"
+            android:layout_margin="5dp" />
+
+
+        <TextView
+            android:id="@+id/chat"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:text="TextView"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/time_stamp"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="time"
+            android:textColor="#556"
+            android:visibility="visible"
+            tools:layout_marginTop="@dimen/main_layout_margins" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
