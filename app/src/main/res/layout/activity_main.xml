@@ -1,14 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/container_main"
+    android:orientation="vertical"
+    android:background="#131313"
+    android:weightSum="2"
     tools:context=".MainActivity">
 
+    <ScrollView
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <include layout="@layout/content_main" />
+            <TextView
+                android:id="@+id/profile_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:text="Fedda95"
+                android:textColor="#fff"
+                android:textSize="14sp" />
 
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_name"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fedda"
+                app:civ_border_color="#fff"
+                app:civ_border_width="3dp" />
 
-</android.support.design.widget.CoordinatorLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/chat_link"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_settings_yellow_24dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/pair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="4dp"
+                    android:text="Pair"
+                    android:textColor="#ff0"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/notification"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_notification1"
+                    android:padding="4dp"
+                    android:textColor="#ff0"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/CLICK_TO_GET_DETAIL"
+                android:textColor="#ff0"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/Gridview"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center" />
+
+</LinearLayout>

@@ -34,7 +34,7 @@
         android:layout_width="30dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:visibility="invisible"
         android:layout_margin="@dimen/main_layout_margins"
         android:layout_toRightOf="@id/userChat"

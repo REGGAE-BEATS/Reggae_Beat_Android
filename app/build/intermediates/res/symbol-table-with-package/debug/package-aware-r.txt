@@ -972,6 +972,12 @@ drawable ic_friends_yellow_24dp
 drawable ic_image_box
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_menu_camera
+drawable ic_menu_gallery
+drawable ic_menu_manage
+drawable ic_menu_send
+drawable ic_menu_share
+drawable ic_menu_slideshow
 drawable ic_music_box
 drawable ic_music_note_yellow_24dp
 drawable ic_next_song_24dp
@@ -1020,6 +1026,7 @@ drawable round_music_video_black_18dp
 drawable round_pause_circle_outline_black_18dp
 drawable round_play_circle_outline_black_18dp
 drawable round_replay_black_18dp
+drawable side_nav_bar
 drawable tool_1
 drawable tool_2
 drawable tooltip_frame_dark
@@ -1028,8 +1035,6 @@ drawable translation_background
 drawable video_background
 id ALT
 id CTRL
-id Chat_base
-id Exit
 id FUNCTION
 id Gridview
 id Instructions
@@ -1041,10 +1046,6 @@ id RegisterButtonId
 id RegisterId
 id SHIFT
 id SYM
-id Title
-id Uploads
-id about_me
-id about_me_details
 id acceptPairRequest
 id action0
 id action_bar
@@ -1107,7 +1108,6 @@ id clip_vertical
 id collapseActionView
 id constraintLayout
 id container
-id container_main
 id content
 id contentPanel
 id coordinator
@@ -1116,7 +1116,6 @@ id customMessage
 id customPanel
 id custom_message_lbl
 id custom_spinner_selection
-id dancehall_check
 id dark
 id decor_content_parent
 id default_activity_button
@@ -1131,7 +1130,8 @@ id direct
 id directory_empty_view
 id directory_recycler_view
 id disableHome
-id drawer_layout
+id dropbox_overlay
+id dropbox_subscribe_btn
 id editTextAccountLoginId
 id editTextLoginPasswordId
 id edit_query
@@ -1171,12 +1171,9 @@ id fixed
 id fixed_height
 id fixed_width
 id forever
-id frameid
 id friend_Image
 id friend_Name
 id friends
-id friends_container
-id friends_heading
 id from
 id from_container
 id ghost_view
@@ -1191,7 +1188,6 @@ id id_appbar
 id ifRoom
 id image
 id imageView
-id img_container
 id img_profile
 id info
 id instructions
@@ -1203,6 +1199,7 @@ id item_file_title
 id item_number
 id item_touch_helper_previous_elevation
 id largeLabel
+id launch_dropbox_activity
 id launch_upload_activity
 id layoutMain
 id lblStatus
@@ -1222,7 +1219,6 @@ id middle
 id mini
 id multiply
 id music_player_image
-id nav_view
 id navigation_header_container
 id never
 id none
@@ -1246,14 +1242,11 @@ id person
 id pin
 id player_view
 id playlist
-id profile
-id profile_block
 id profile_image
 id profile_image1
 id profile_image2
 id profile_name
 id profile_name1
-id profile_submit
 id progresBarId
 id progress_circular
 id progress_horizontal
@@ -1261,7 +1254,6 @@ id quick_attach
 id quick_attach_lbl
 id radio
 id recycler_fragment
-id reggae_check
 id registrationId
 id right
 id right_icon
@@ -1296,14 +1288,12 @@ id showCustom
 id showHome
 id showTitle
 id size
-id ska_check
 id smallLabel
 id snackbar_action
 id snackbar_text
 id snap
 id song_play
 id spacer
-id spinner
 id split_action_bar
 id spread
 id spread_inside
@@ -1355,7 +1345,6 @@ id txv_name
 id txv_status
 id uniform
 id up
-id uploads_heading
 id useLogo
 id userChat
 id video2
@@ -1406,9 +1395,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_base
 layout activity_chat
 layout activity_chat__pairing
+layout activity_dropbox
 layout activity_file_picker
 layout activity_friend_request
 layout activity_login
@@ -1417,12 +1406,8 @@ layout activity_music_streaming
 layout activity_pair_request
 layout activity_player_store_front
 layout activity_playlist
-layout activity_profile
 layout activity_registration
-layout app_bar_base
 layout chat_custom_layout
-layout content_base
-layout content_main
 layout custom_chat_card
 layout custom_friend_layout
 layout custom_playback_control
@@ -1459,6 +1444,7 @@ layout item_file
 layout me_bubble
 layout most_played
 layout nav_header_base
+layout navigation_bar
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1480,7 +1466,6 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout upload
-menu activity_base_drawer
 menu menu_chat__pairing
 menu menu_main
 menu menu_player_store_front
@@ -1651,6 +1636,7 @@ string tab_text_2
 string tab_text_3
 string title_activity_base
 string title_activity_chat__pairing
+string title_activity_dropbox
 string title_activity_first
 string title_activity_home
 string title_activity_player_store_front

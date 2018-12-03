@@ -68,7 +68,9 @@ public class RegistrationActivity extends AppCompatActivity {
                                     public void onComplete(@NonNull Task<AuthResult> task) {
                                         if (task.isSuccessful()) {
                                             // Sign in success, update UI with the signed-in user's information
-                                            startActivity(new Intent(RegistrationActivity.this,  BaseActivity.class));
+                                            Intent i = new Intent(RegistrationActivity.this,  MainActivity.class);
+                                            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); finish();
+                                            startActivity(i);
                                         } else {
                                             // If sign in fails, display a message to the user.
                                             Log.d("LOGIN", "createUserWithEmail:failure", task.getException());

@@ -81,4 +81,5 @@
     <string name="pair_registration_code">Enter pair registration code</string>
     <string name="REGISTRATION_CODE_PLACEHOLDER">Registration code goes here</string>
     <string name="title_activity_chat__pairing">Chat_PairingActivity</string>
+    <string name="title_activity_dropbox">Content Dropbox</string>
 </resources>

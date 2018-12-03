@@ -20,10 +20,4 @@
         android:title="Chat"
         app:showAsAction="always" />
 
-    <item
-        android:id="@+id/profile"
-        android:orderInCategory="1"
-        android:icon="@drawable/ic_person_add_yellow_24dp"
-        android:title="Chat"
-        app:showAsAction="always" />
 </menu>

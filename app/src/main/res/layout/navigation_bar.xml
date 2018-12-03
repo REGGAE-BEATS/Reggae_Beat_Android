@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/best_played"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="Most played"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="onClick"/>
+
+        <!--Separator-->
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#b4b4b4"/>
+
+        <TextView
+            android:id="@+id/playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Playlists"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="onClick"/>
+
+        <!--Separator-->
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#b4b4b4"/>
+
+        <TextView
+            android:id="@+id/friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Friends"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="onClick"/>
+
+        <!--Separator-->
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#b4b4b4"/>
+
+        <TextView
+            android:id="@+id/launch_upload_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Uploads"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="onClick"/>
+
+        <!--Separator-->
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#b4b4b4"/>
+
+        <TextView
+            android:id="@+id/launch_dropbox_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Dropbox"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+</HorizontalScrollView>

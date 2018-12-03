@@ -36,8 +36,10 @@ public class LoginActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         if(mAuth.getCurrentUser() != null)
         {
-            //user already logged in, go to BaseActivity
-            startActivity(new Intent(this,  BaseActivity.class));
+            //user already logged in, go to MainActivity
+            Intent i = new Intent(LoginActivity.this,  MainActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i); finish();
         }
 
         progressBar = findViewById(R.id.progresBarId);
@@ -62,7 +64,9 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
-                                    startActivity(new Intent(LoginActivity.this,  BaseActivity.class));
+                                    Intent i = new Intent(LoginActivity.this,  MainActivity.class);
+                                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(i); finish();
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Log.d("LOGIN", "createUserWithEmail:failure", task.getException());

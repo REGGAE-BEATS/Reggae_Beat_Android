@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -31,9 +32,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-public class MainActivity extends BaseActivity implements View.OnClickListener, PairingChooser.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, PairingChooser.OnFragmentInteractionListener {
     private TextView playlist, launch_upload, pair;
-    private Toolbar toolbar;
     private FragmentStorage fragmentStorage;
     private FragmentManager fragmentManager;
     private FriendAdapter friendAdapter;
@@ -50,21 +50,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getLayoutInflater().inflate(R.layout.activity_main, contentFrame, true);
+        setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
         gridView = (RecyclerView) findViewById(R.id.Gridview);
         GridLayoutManager = new GridLayoutManager(this, 4);
         pair = findViewById(R.id.pair);
-        setSupportActionBar(toolbar);
+
         // mAuth = FirebaseAuth.getInstance();
-        getSupportActionBar().setTitle("Profile");
-        launch_upload = (TextView) findViewById(R.id.launch_upload_activity);
-        playlist = (TextView) findViewById(R.id.playlist);
-        playlist.setOnClickListener(this);
         ArrayList itemArrayList;
-        launch_upload.setOnClickListener(this);
-        pair.setOnClickListener(this);
 
         if (savedInstanceState == null) {
 
@@ -94,24 +87,28 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     public void onClick(View v) {
         int id = v.getId();
+        Intent intent;
         switch (id) {
             case R.id.playlist:
-                Intent intent = new Intent(MainActivity.this, PlayListActivity.class);
+                intent = new Intent(MainActivity.this, PlayListActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.launch_upload_activity:
-                Intent intent2 = new Intent(MainActivity.this, UploadActivity.class);
-                startActivity(intent2);
+                intent = new Intent(MainActivity.this, UploadActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.launch_dropbox_activity:
+                intent = new Intent(MainActivity.this, DropboxActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.pair:
                 PairingChooser pairingListFragment = new PairingChooser();
                 FragmentTransaction ft = fragmentManager.beginTransaction();
-                ft.replace(R.id.container_main, pairingListFragment);
-                ft.addToBackStack(null).commit();
-
-
+                //ft.replace(R.id.container_main, pairingListFragment);
+               // ft.addToBackStack(null).commit();
                 break;
         }
 
@@ -203,16 +200,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
             //Launch chat login fragment
 
             FragmentTransaction fragmentTransaction1 = fragmentManager.beginTransaction();
-            fragmentTransaction1.add(R.id.container_main, new Chat_login_fragment())
-                    .addToBackStack(null).commit();
+            //fragmentTransaction1.add(R.id.container_main, new Chat_login_fragment())
+                    //.addToBackStack(null).commit();
 
 
         }
-        if (id == R.id.profile) {
 
-            Intent intent = new Intent(this, Profile.class);
-            startActivity(intent);
-        }
         return super.onOptionsItemSelected(item);
     }
 

@@ -14,10 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".BaseActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -28,6 +24,11 @@
         </activity>
         <activity
             android:name=".RegistrationActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Reggae Beats"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".PlayListActivity"
@@ -52,16 +53,22 @@
             android:name=".Chat_PairingActivity"
             android:label="@string/title_activity_chat__pairing"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Profile"></activity>
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/icon" />
-        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
-             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
+
+        <activity
+            android:name=".DropboxActivity"
+            android:label="@string/title_activity_dropbox"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

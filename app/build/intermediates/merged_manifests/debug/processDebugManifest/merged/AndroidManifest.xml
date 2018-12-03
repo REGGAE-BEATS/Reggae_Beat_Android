@@ -27,10 +27,6 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="reggae_beats.com.reggaebeats.BaseActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name="reggae_beats.com.reggaebeats.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -41,6 +37,10 @@
         </activity>
         <activity
             android:name="reggae_beats.com.reggaebeats.RegistrationActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="reggae_beats.com.reggaebeats.MainActivity"
+            android:label="Reggae Beats"
             android:theme="@style/AppTheme" />
         <activity
             android:name="reggae_beats.com.reggaebeats.PlayListActivity"
@@ -65,7 +65,6 @@
             android:name="reggae_beats.com.reggaebeats.Chat_PairingActivity"
             android:label="@string/title_activity_chat__pairing"
             android:theme="@style/AppTheme" />
-        <activity android:name="reggae_beats.com.reggaebeats.Profile" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
@@ -78,6 +77,10 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
+        <activity
+            android:name="reggae_beats.com.reggaebeats.DropboxActivity"
+            android:label="@string/title_activity_dropbox"
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.nbsp.materialfilepicker.ui.FilePickerActivity"
             android:theme="@style/MFP_BaseTheme" >
