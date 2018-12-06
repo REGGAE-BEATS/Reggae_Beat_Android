@@ -5,10 +5,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -24,6 +28,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.chibde.visualizer.BarVisualizer;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,16 +50,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // private DatabaseReference defaultDatabaseRefernce;
     private RecyclerView.LayoutManager GridLayoutManager;
     private ArrayList<FriendsItem> personArrayList = new ArrayList<>();
+    MediaPlayer mediaPlayer;
 
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gridView = (RecyclerView) findViewById(R.id.Gridview);
-        GridLayoutManager = new GridLayoutManager(this, 4);
         pair = findViewById(R.id.pair);
+        prefs = getSharedPreferences(getResources().getString(R.string.SHARED_PREF_CONST), MODE_PRIVATE);
 
         // mAuth = FirebaseAuth.getInstance();
         ArrayList itemArrayList;
@@ -79,6 +85,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             gridView.setAdapter(friendAdapter);
         } else {
             compileFriendList();
+        }
+
+        ///////////////VISUALIZER/////////////////
+        BarVisualizer barVisualizer = findViewById(R.id.barVisualizer);
+        mediaPlayer = new MediaPlayer();
+        // set custom color to the line.
+        barVisualizer.setColor(Color.RED);
+        barVisualizer.setDensity(70);
+        if(prefs.getInt("MediaPlayerID", 0) != 0){
+            barVisualizer.setPlayer(prefs.getInt("MediaPlayerID", 0));
         }
 
     }

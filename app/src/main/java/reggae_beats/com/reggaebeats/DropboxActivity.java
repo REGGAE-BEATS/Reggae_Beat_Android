@@ -3,6 +3,7 @@ package reggae_beats.com.reggaebeats;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -12,6 +13,8 @@ import android.widget.Toast;
 import android.media.MediaPlayer;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -24,6 +27,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 public class DropboxActivity extends AppCompatActivity implements MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener{
 
@@ -42,7 +47,7 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
 
         /////////////////////////////////////////////////////////
         prefs = getSharedPreferences(getResources().getString(R.string.SHARED_PREF_CONST), MODE_PRIVATE);
-        if(prefs.getBoolean("isSubscribedToDropbox", false) )
+        if(prefs.getBoolean("isSubscribedToDropbox", false))
         {
             findViewById(R.id.dropbox_overlay).setVisibility(View.GONE);
         }
@@ -53,15 +58,14 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
         mediaPlayer.setOnErrorListener(this);
 
         mAuth = FirebaseAuth.getInstance();
-        storage = FirebaseStorage.getInstance("gs://reggaebeat-40b1e.appspot.com");
-        database = FirebaseDatabase.getInstance();
+        storage = FirebaseStorage.getInstance();
+        //database = FirebaseDatabase.getInstance();
         musicDropbox = storage.getReference().child("MusicDropbox");
         viddeoDropbox = storage.getReference().child("VideoDropbox");
 
         /////////////////////////////////////
         //populate view with files we publish
-        playAudio("https://firebasestorage.googleapis.com/v0/b/reggaebeat-40b1e.appspot.com/o/MusicDropbox%2FMade%20in%20China%20(Instrumental)%20-%20Higher%20Brothers%20feat.%20Famous%20Dex.mp3?alt=media&token=830f8166-7bb5-4b81-93ee-ab960297138f");
-
+        playAudio("gs://reggaebeat-40b1e.appspot.com/MusicDropbox/MadeInChina.mp3");
     }
 
     public void PopulateLists()
@@ -72,19 +76,29 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
     public void playAudio(String url)
     {
         Toast.makeText(DropboxActivity.this, "LOADING MEDIA...", Toast.LENGTH_SHORT).show();
-        killMediaPlayer();
-        try {
-            mediaPlayer.setDataSource(url);
-            mediaPlayer.prepareAsync();
-        }catch (IOException e){
-            e.printStackTrace();
-        }catch (IllegalStateException e){
-            e.printStackTrace();
-        }catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
+
+        StorageReference storageRef = storage.getReferenceFromUrl(url);
+        storageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                try {
+                    // Download url of file
+                    mediaPlayer.setDataSource(uri.toString());
+                    // wait for media player to get prepare
+                    mediaPlayer.prepareAsync();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }catch (IllegalStateException e){
+                    e.printStackTrace();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.i("TAG", e.getMessage());
+                        Toast.makeText(DropboxActivity.this, "Playing", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     public void killMediaPlayer() {
@@ -98,8 +112,11 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
         }
     }
 
-    public void onPrepared(MediaPlayer player) {
-        player.start();
+    @Override
+    public void onPrepared(MediaPlayer mp) {
+        mp.start();
+        prefs.edit().putInt("MediaPlayerID", mediaPlayer.getAudioSessionId());
+        prefs.edit().commit();
         Toast.makeText(DropboxActivity.this, "NOW PLAYING", Toast.LENGTH_SHORT).show();
     }
 
@@ -118,7 +135,7 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
                         if (task.isSuccessful()) {
                             msg = "YOU ARE NOW SUBSCRIBED!";
                             prefs.edit().putBoolean("isSubscribedToDropbox", true);
-                            prefs.edit().apply();
+                            prefs.edit().commit();
                             //restart activity
                             startActivity(new Intent(DropboxActivity.this,  DropboxActivity.class));
                         }
@@ -131,4 +148,9 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
                 });
     }
 
+    @Override
+    protected void onDestroy() {
+        killMediaPlayer();
+        super.onDestroy();
+    }
 }

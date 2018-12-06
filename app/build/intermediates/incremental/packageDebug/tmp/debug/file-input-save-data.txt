@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Dec 03 18:56:27 EST 2018
+#Mon Dec 03 23:09:12 EST 2018
 1.base=C\:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\Reggae_Beat_Android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
@@ -7,5 +7,5 @@ count=2
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=C\:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\Reggae_Beat_Android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-1.path=classes2.dex
+0.base=C\:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\Reggae_Beat_Android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+1.path=classes.dex

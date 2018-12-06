@@ -1,2 +1,2 @@
-# Referenced at C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:19
+# Referenced at C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20
 -keep class android.support.multidex.MultiDexApplication { <init>(...); }

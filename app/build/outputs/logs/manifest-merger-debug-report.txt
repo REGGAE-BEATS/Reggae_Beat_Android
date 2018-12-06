@@ -1,9 +1,10 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
+MERGED from [com.chibde:audiovisualizer:2.0.1] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\audiovisualizer-2.0.1.aar\e31b9f2866cb6f0d93099286b4775365\AndroidManifest.xml:2:1-16:12
 MERGED from [com.android.support:multidex:1.0.3] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\6ace09ea99e7b71dec7a39f88c815ddd\AndroidManifest.xml:17:1-22:12
 MERGED from [com.nbsp:library:1.09] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\library-1.09.aar\27f7dd67a5ea5b2740ff5eefd8f64d85\AndroidManifest.xml:2:1-22:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\374f3210bead90f38e00a68060e1684b\AndroidManifest.xml:17:1-22:12
@@ -50,20 +51,20 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\C.M.C\.gradle\cach
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1547c66671c21c93c7ff22aa5934ac1b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\f7ae1e8071f0f3b70360bbab663bf0c2\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\b20c0e981d14ae255483ee329efbc11e\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
-INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
+INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
 	package
 		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:3:5-43
 		INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-74:12
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:1-75:12
 		INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:2:11-69
@@ -103,8 +104,16 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
 		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:8:5-70
+MERGED from [com.chibde:audiovisualizer:2.0.1] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\audiovisualizer-2.0.1.aar\e31b9f2866cb6f0d93099286b4775365\AndroidManifest.xml:11:5-71
+MERGED from [com.chibde:audiovisualizer:2.0.1] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\audiovisualizer-2.0.1.aar\e31b9f2866cb6f0d93099286b4775365\AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:8:22-68
 application
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:9:5-72:19
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:10:5-73:19
+MERGED from [com.chibde:audiovisualizer:2.0.1] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\audiovisualizer-2.0.1.aar\e31b9f2866cb6f0d93099286b4775365\AndroidManifest.xml:13:5-14:19
+MERGED from [com.chibde:audiovisualizer:2.0.1] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\audiovisualizer-2.0.1.aar\e31b9f2866cb6f0d93099286b4775365\AndroidManifest.xml:13:5-14:19
 MERGED from [com.nbsp:library:1.09] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\library-1.09.aar\27f7dd67a5ea5b2740ff5eefd8f64d85\AndroidManifest.xml:13:5-20:19
 MERGED from [com.nbsp:library:1.09] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\library-1.09.aar\27f7dd67a5ea5b2740ff5eefd8f64d85\AndroidManifest.xml:13:5-20:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\769ab0aad8ce396073c2d0350cd43b9a\AndroidManifest.xml:9:5-20
@@ -148,123 +157,125 @@ MERGED from [com.android.volley:volley:1.1.0] C:\Users\C.M.C\.gradle\caches\tran
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\f7ae1e8071f0f3b70360bbab663bf0c2\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\f7ae1e8071f0f3b70360bbab663bf0c2\AndroidManifest.xml:22:5-20
 	android:supportsRtl
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:14:9-43
 	android:icon
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:11:9-38
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:12:9-38
 	android:allowBackup
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:16:9-40
 activity#reggae_beats.com.reggaebeats.LoginActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:16:9-24:20
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:17:9-25:20
 	android:theme
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:18:13-56
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:19:13-56
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:17:13-42
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:18:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:23:27-74
 activity#reggae_beats.com.reggaebeats.RegistrationActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:25:9-27:47
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:26:9-28:47
 	android:theme
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:27:13-44
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:28:13-44
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:26:13-49
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:27:13-49
 activity#reggae_beats.com.reggaebeats.MainActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:29:9-32:47
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:30:9-33:47
 	android:label
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:32:13-41
+	android:theme
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:33:13-44
+	android:name
 		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:31:13-41
-	android:theme
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:32:13-44
-	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:30:13-41
 activity#reggae_beats.com.reggaebeats.PlayListActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:33:9-35:47
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:34:9-36:47
 	android:theme
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:35:13-44
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:36:13-44
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:34:13-45
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:35:13-45
 service#reggae_beats.com.reggaebeats.MyFirebaseMessagingService
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:37:9-41:19
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:38:9-42:19
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:37:18-60
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:38:18-60
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:38:13-40:29
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:39:13-41:29
 action#com.google.firebase.MESSAGING_EVENT
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:39:17-78
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:40:17-78
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:39:25-75
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:40:25-75
 activity#reggae_beats.com.reggaebeats.PlayerStoreFront
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:43:9-46:47
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:44:9-47:47
 	android:label
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:45:13-70
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:46:13-70
 	android:theme
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:46:13-44
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:47:13-44
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:44:13-45
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:45:13-45
 activity#reggae_beats.com.reggaebeats.MusicStreamingActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:47:9-60
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:48:9-60
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:47:19-57
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:48:19-57
 activity#reggae_beats.com.reggaebeats.UploadActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:48:9-52
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:49:9-52
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:48:19-49
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:49:19-49
 activity#reggae_beats.com.reggaebeats.ChatActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:49:9-50
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:50:9-50
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:49:19-47
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:50:19-47
 activity#reggae_beats.com.reggaebeats.PairRequestActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:50:9-57
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:51:9-57
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:50:19-54
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:51:19-54
 activity#reggae_beats.com.reggaebeats.FriendRequestActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:51:9-59
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:52:9-59
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:51:19-56
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:52:19-56
 activity#reggae_beats.com.reggaebeats.Chat_PairingActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:52:9-55:47
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:53:9-56:47
 	android:label
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:54:13-65
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:55:13-65
 	android:theme
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:55:13-44
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:56:13-44
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:53:13-49
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:54:13-49
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:57:9-59:49
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:58:9-60:49
 	android:resource
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:59:13-46
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:60:13-46
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:58:13-83
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:59:13-83
 meta-data#com.google.firebase.messaging.default_notification_color
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:64:9-66:53
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:65:9-67:53
 	android:resource
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:66:13-50
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:67:13-50
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:65:13-84
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:66:13-84
 activity#reggae_beats.com.reggaebeats.DropboxActivity
-ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:68:9-71:46
+ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:69:9-72:46
 	android:label
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:70:13-59
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:71:13-59
 	android:theme
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:71:13-44
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:72:13-44
 	android:name
-		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:69:13-44
+		ADDED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml:70:13-44
 uses-sdk
 INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\C.M.C\Documents\ANDROID_APP_PROJECTS\Reggae_Beat_Android\app\src\main\AndroidManifest.xml
+MERGED from [com.chibde:audiovisualizer:2.0.1] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\audiovisualizer-2.0.1.aar\e31b9f2866cb6f0d93099286b4775365\AndroidManifest.xml:7:5-9:41
+MERGED from [com.chibde:audiovisualizer:2.0.1] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\audiovisualizer-2.0.1.aar\e31b9f2866cb6f0d93099286b4775365\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:multidex:1.0.3] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\6ace09ea99e7b71dec7a39f88c815ddd\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:multidex:1.0.3] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\multidex-1.0.3.aar\6ace09ea99e7b71dec7a39f88c815ddd\AndroidManifest.xml:20:5-43
 MERGED from [com.nbsp:library:1.09] C:\Users\C.M.C\.gradle\caches\transforms-1\files-1.1\library-1.09.aar\27f7dd67a5ea5b2740ff5eefd8f64d85\AndroidManifest.xml:7:5-9:41

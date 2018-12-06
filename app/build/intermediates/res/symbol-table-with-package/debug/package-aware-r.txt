@@ -1036,7 +1036,6 @@ drawable video_background
 id ALT
 id CTRL
 id FUNCTION
-id Gridview
 id Instructions
 id Login
 id META
@@ -1082,6 +1081,7 @@ id artist_play
 id async
 id attach_container
 id auto
+id barVisualizer
 id barrier
 id beginning
 id best_played
@@ -1190,7 +1190,6 @@ id image
 id imageView
 id img_profile
 id info
-id instructions
 id invisible
 id italic
 id item_file_image
@@ -1245,7 +1244,6 @@ id playlist
 id profile_image
 id profile_image1
 id profile_image2
-id profile_name
 id profile_name1
 id progresBarId
 id progress_circular
