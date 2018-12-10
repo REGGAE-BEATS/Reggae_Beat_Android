@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\C.M.C\\Documents\\ANDROID_APP_PROJECTS\\Reggae_Beat_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fi\\values-fi.xml",
+            "outputFile": "C:\\Users\\Ron\\Reggae_Beat_Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fi\\values-fi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-17.3.4.aar\\28a16e7e9b0fea952b3f1db7f7d23df2\\res\\values-fi\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "205",
-                        "endColumns": "98",
-                        "endOffsets": "303"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5684",
-                        "endColumns": "102",
-                        "endOffsets": "5782"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\bda5570f78d6cd94f4d775b34c1472b1\\res\\values-fi\\values.xml",
+                    "source": "C:\\Users\\Ron\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\31436f9dfc058f17782ba0f610859343\\res\\values-fi\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.7.3.aar\\dbe5ef8e64fd9c47473a3f959d1bb1c2\\res\\values-fi\\values-fi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,166,271,369,464,574,692,806,921,1028,1135",
-                        "endColumns": "110,104,97,94,109,117,113,114,106,106,93",
-                        "endOffsets": "161,266,364,459,569,687,801,916,1023,1130,1224"
-                    },
-                    "to": {
-                        "startLines": "37,38,39,40,41,42,43,44,45,46,47",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4510,4621,4726,4824,4919,5029,5147,5261,5376,5483,5590",
-                        "endColumns": "110,104,97,94,109,117,113,114,106,106,93",
-                        "endOffsets": "4616,4721,4819,4914,5024,5142,5256,5371,5478,5585,5679"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\44045df241b2c460dedd5ea7e15e4428\\res\\values-fi\\values-fi.xml",
+                    "source": "C:\\Users\\Ron\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\caa2a40c23c8f31e7cf48a763820e449\\res\\values-fi\\values-fi.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -72,7 +38,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a5fab0049ad03e1f51b536439f978ee2\\res\\values-fi\\values-fi.xml",
+                    "source": "C:\\Users\\Ron\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\b767c7df0e6442ea5d68c092b02f4b62\\res\\values-fi\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "208",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "3001",
+                        "endColumns": "208",
+                        "endOffsets": "3205"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ron\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-17.3.4.aar\\a612f8437a4e7c30cdba92c9302b312c\\res\\values-fi\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "98",
+                        "endOffsets": "303"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5684",
+                        "endColumns": "102",
+                        "endOffsets": "5782"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ron\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\952d03835fcaa15b2406f9942c1579db\\res\\values-fi\\values-fi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -89,20 +89,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\C.M.C\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\00db6de607dee115d24037f8f33f30a4\\res\\values-fi\\values.xml",
+                    "source": "C:\\Users\\Ron\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-2.7.3.aar\\5d199dc26ebb2dcf39d2d9eebffdd0cd\\res\\values-fi\\values-fi.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "208",
-                        "endOffsets": "455"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,166,271,369,464,574,692,806,921,1028,1135",
+                        "endColumns": "110,104,97,94,109,117,113,114,106,106,93",
+                        "endOffsets": "161,266,364,459,569,687,801,916,1023,1130,1224"
                     },
                     "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "3001",
-                        "endColumns": "208",
-                        "endOffsets": "3205"
+                        "startLines": "37,38,39,40,41,42,43,44,45,46,47",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4510,4621,4726,4824,4919,5029,5147,5261,5376,5483,5590",
+                        "endColumns": "110,104,97,94,109,117,113,114,106,106,93",
+                        "endOffsets": "4616,4721,4819,4914,5024,5142,5256,5371,5478,5585,5679"
                     }
                 }
             ]

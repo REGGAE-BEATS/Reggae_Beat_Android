@@ -1171,6 +1171,7 @@ id fixed
 id fixed_height
 id fixed_width
 id forever
+id friendChat
 id friend_Image
 id friend_Name
 id friends

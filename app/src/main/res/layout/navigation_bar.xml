@@ -43,6 +43,27 @@
             android:onClick="onClick"/>
 
         <!--Separator-->
+        <!--Separator-->
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#b4b4b4"/>
+
+        <TextView
+            android:id="@+id/friendChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Chat"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="onClick"/>
+
+        <!--Separator-->
+
+
         <ImageView
             android:layout_width="5dp"
             android:layout_height="match_parent"

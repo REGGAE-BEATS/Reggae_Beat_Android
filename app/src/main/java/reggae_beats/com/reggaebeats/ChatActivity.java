@@ -3,6 +3,7 @@ package reggae_beats.com.reggaebeats;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -16,12 +17,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ChatActivity extends AppCompatActivity implements PairingChooser.OnFragmentInteractionListener {
     private RecyclerView recyclerView;
@@ -45,6 +54,12 @@ public class ChatActivity extends AppCompatActivity implements PairingChooser.On
     private int previousFriendArraySize = 0;
     private String type = "";
     private String retrievedFriend = null;
+    private static final String TAG = "Chat Activity";
+    private static final String FROM = "FROM";
+    private static final String TO = "TO";
+    private static final String CHAT = "CHAT";
+    private static final String TYPE = "TYPE";
+    private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +71,21 @@ public class ChatActivity extends AppCompatActivity implements PairingChooser.On
         btSubmitChat = findViewById(R.id.submitChat);
         handler = new Handler();
         userName = new SharedPreferenceConfig(this).findValue("USERNAME");
+        //getFriendList();
         //Toast.makeText(this,"You are logged in as " + userName ,Toast.LENGTH_LONG).show();
+
+        //Initialise firebase with an an activity context
+
+
         if (userName != null) {
             type = "GET_FRIENDS";
 
-            GetFriendTask friendTask = new GetFriendTask();
-            friendTask.execute(userName, null, type);
 
+           // GetFriendTask friendTask = new GetFriendTask();
+            //friendTask.execute(userName, null, type);
+
+        } else {
+            type = "INSERT";
         }
 
         /*-----------------------end of view initialization---------------------------*/
@@ -77,13 +100,41 @@ public class ChatActivity extends AppCompatActivity implements PairingChooser.On
             @Override
             public void onClick(View v) {
                 type = "INSERT";
-                if (new Configuration(ChatActivity.this).IsNetworkAvailable()) {
+
+                buildChatInformation();
+                /*if (new Configuration(ChatActivity.this).IsNetworkAvailable()) {
                     SendUserChat SUC = new SendUserChat();
                     SUC.execute(urlChat);
 
-                }
+                }*/
 
                 //Toast.makeText(getApplicationContext(), query, Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+    private void getFriendList() {
+    }
+
+    private void buildChatInformation() {
+        Map<String, String> hashMap = new HashMap<>();
+        userChatValue = etUserChat.getText().toString();
+        hashMap.put(FROM, userName);
+        hashMap.put(TO, retrievedFriend);
+        hashMap.put(CHAT, userChatValue);
+        hashMap.put(TYPE, type);
+
+        firebaseFirestore.collection("Chat Messages").document("Chats").set(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Toast.makeText(ChatActivity.this, "Chat Uploaded", Toast.LENGTH_SHORT).show();
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ChatActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 
