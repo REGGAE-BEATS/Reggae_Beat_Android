@@ -37,27 +37,28 @@
             android:text="Subscribe"/>
     </LinearLayout>
 
-    <LinearLayout
+    <!--MUSIC VISUALIZER-->
+    <com.chibde.visualizer.BarVisualizer
+        android:id="@+id/barVisualizer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="2">
-        <!--list of content on the server-->
-        <ScrollView
-            android:layout_weight="2"
+        android:layout_height="150dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#fff"/>
+
+    <!--list of content on the server-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <!--populated by code-->
-        </ScrollView>
+        </LinearLayout>
 
-        <!--navigation-->
-        <include
-            android:layout_gravity="bottom|center"
-            android:layout_height="50dp"
-            android:layout_width="match_parent"
-            layout="@layout/navigation_bar"/>
-    </LinearLayout>
-
-
+    </ScrollView>
 
 </LinearLayout>

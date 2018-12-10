@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
@@ -50,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // private DatabaseReference defaultDatabaseRefernce;
     private RecyclerView.LayoutManager GridLayoutManager;
     private ArrayList<FriendsItem> personArrayList = new ArrayList<>();
-    MediaPlayer mediaPlayer;
 
     SharedPreferences prefs;
 
@@ -88,14 +88,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         ///////////////VISUALIZER/////////////////
-        BarVisualizer barVisualizer = findViewById(R.id.barVisualizer);
-        mediaPlayer = new MediaPlayer();
+        BarVisualizer barVisualizer = (BarVisualizer) findViewById(R.id.barVisualizer);
         // set custom color to the line.
         barVisualizer.setColor(Color.RED);
         barVisualizer.setDensity(70);
-        if(prefs.getInt("MediaPlayerID", 0) != 0){
-            barVisualizer.setPlayer(prefs.getInt("MediaPlayerID", 0));
-        }
+        //barVisualizer.setPlayer(1000);
+
 
     }
 

@@ -1,10 +1,13 @@
 package reggae_beats.com.reggaebeats;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 import android.media.MediaPlayer;
 
+import com.chibde.visualizer.BarVisualizer;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -34,10 +38,12 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
 
     FirebaseAuth mAuth;
     SharedPreferences prefs;
+    SharedPreferences.Editor editor;
     FirebaseStorage storage;
     FirebaseDatabase database;
     StorageReference musicDropbox, viddeoDropbox;
     MediaPlayer mediaPlayer;
+    BarVisualizer barVisualizer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,8 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
 
         /////////////////////////////////////////////////////////
         prefs = getSharedPreferences(getResources().getString(R.string.SHARED_PREF_CONST), MODE_PRIVATE);
+        editor = prefs.edit();
+
         if(prefs.getBoolean("isSubscribedToDropbox", false))
         {
             findViewById(R.id.dropbox_overlay).setVisibility(View.GONE);
@@ -63,8 +71,13 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
         musicDropbox = storage.getReference().child("MusicDropbox");
         viddeoDropbox = storage.getReference().child("VideoDropbox");
 
+        ///////////////VISUALIZER/////////////////
+        barVisualizer = (BarVisualizer) findViewById(R.id.barVisualizer);
+        // set custom color to the line.
+        barVisualizer.setColor(Color.RED);
+        barVisualizer.setDensity(70);
+
         /////////////////////////////////////
-        //populate view with files we publish
         playAudio("gs://reggaebeat-40b1e.appspot.com/MusicDropbox/MadeInChina.mp3");
     }
 
@@ -77,6 +90,8 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
     {
         Toast.makeText(DropboxActivity.this, "LOADING MEDIA...", Toast.LENGTH_SHORT).show();
 
+        killMediaPlayer();
+
         StorageReference storageRef = storage.getReferenceFromUrl(url);
         storageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
@@ -84,7 +99,7 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
                 try {
                     // Download url of file
                     mediaPlayer.setDataSource(uri.toString());
-                    // wait for media player to get prepare
+                    // wait for media player to get prepared
                     mediaPlayer.prepareAsync();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -96,13 +111,13 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.i("TAG", e.getMessage());
-                        Toast.makeText(DropboxActivity.this, "Playing", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DropboxActivity.this, "Cannot access file", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
     public void killMediaPlayer() {
-        if(mediaPlayer!=null) {
+        if(mediaPlayer.isPlaying()) {
             try {
                 mediaPlayer.release();
             }
@@ -115,8 +130,9 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
     @Override
     public void onPrepared(MediaPlayer mp) {
         mp.start();
-        prefs.edit().putInt("MediaPlayerID", mediaPlayer.getAudioSessionId());
-        prefs.edit().commit();
+        barVisualizer.setPlayer(mp.getAudioSessionId());
+        editor.putInt("MediaPlayerID", mp.getAudioSessionId());
+        editor.commit();
         Toast.makeText(DropboxActivity.this, "NOW PLAYING", Toast.LENGTH_SHORT).show();
     }
 
@@ -134,10 +150,9 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
                         String msg;
                         if (task.isSuccessful()) {
                             msg = "YOU ARE NOW SUBSCRIBED!";
-                            prefs.edit().putBoolean("isSubscribedToDropbox", true);
-                            prefs.edit().commit();
-                            //restart activity
-                            startActivity(new Intent(DropboxActivity.this,  DropboxActivity.class));
+                            editor.putBoolean("isSubscribedToDropbox", true);
+                            editor.commit();
+                            findViewById(R.id.dropbox_overlay).setVisibility(View.GONE);
                         }
                         else {
                             msg = "FAILED, check network";
@@ -153,4 +168,6 @@ public class DropboxActivity extends AppCompatActivity implements MediaPlayer.On
         killMediaPlayer();
         super.onDestroy();
     }
+
+
 }
